@@ -79,7 +79,7 @@ const StopwatchApp: React.FC = () => {
         
       </View>
       <View style={[styles.lapContainer]}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={[{flexDirection: 'row', justifyContent: 'space-between'}, isRunning ? null : styles.displayNone]}>
             <View>
             <Text style={[styles.lapText]}>Lap {count}:</Text>
             </View>
@@ -98,6 +98,9 @@ const StopwatchApp: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
+  displayNone: {
+    display: 'none',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
