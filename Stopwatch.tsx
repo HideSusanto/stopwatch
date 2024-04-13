@@ -74,7 +74,7 @@ const StopwatchApp: React.FC = () => {
         <TouchableOpacity
           style={[styles.button, isRunning ? styles.stopButton : styles.startButton]}
           onPress={handleStartStop}>
-          <Text style={styles.buttonText}>{isRunning ? 'Stop' : 'Start'}</Text>
+          <Text style={isRunning ? styles.stopText : styles.startText}>{isRunning ? 'Stop' : 'Start'}</Text>
         </TouchableOpacity>
         
       </View>
@@ -123,12 +123,20 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   startButton: {
-    backgroundColor: '#28a745',
+    backgroundColor: '#0a6117',
     opacity: 0.6
   },
   stopButton: {
     backgroundColor: '#dc3545',
     opacity: 0.6,
+  },
+  startText: {
+    color: '#38e852',
+    fontSize: 18,
+  },
+  stopText: {
+    color: 'red',
+    fontSize: 18,
   },
   disabledButton: {
     backgroundColor: '#ccc',
