@@ -79,7 +79,7 @@ const StopwatchApp: React.FC = () => {
         
       </View>
       <View style={[styles.lapContainer]}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <View>
             <Text style={[styles.lapText]}>Lap {count}:</Text>
             </View>
@@ -88,7 +88,7 @@ const StopwatchApp: React.FC = () => {
             </View>
           </View>
         {laps.map((lap, index) => (
-          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <Text style={styles.lapText} key={index}>Lap {index + 1}:</Text><Text style={styles.lapText}> {formatTime(lap)}</Text>
           </View>
         ))}
@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
     
   },
   lapText: {
+    marginHorizontal: 10,
     color: '#fff',
     fontSize: 18,
     marginBottom: 5,
